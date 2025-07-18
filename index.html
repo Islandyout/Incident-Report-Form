@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident Report Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Incident Report Form</h1>
+      <form id="incidentForm">
+        <!-- SECTION 1: BASIC INFORMATION -->
+        <h2>Section 1: Basic Information</h2>
+        <label for="dateOfIncident">Date of Incident:</label>
+        <input type="date" name="dateOfIncident" id="dateOfIncident" /><br />
+        <label
+          >Time of Incident: <input type="time" name="timeOfIncident" /></label
+        ><br />
+        <label
+          >Location of Incident:
+          <input type="text" name="locationOfIncident" /></label
+        ><br />
+        <label>Reported By: <input type="text" name="reportedBy" /></label
+        ><br />
+        <label>Date Reported: <input type="date" name="dateReported" /></label
+        ><br />
+
+        <!-- SECTION 2: PEOPLE INVOLVED -->
+        <h2>Section 2: People Involved</h2>
+        <label
+          ><input type="checkbox" name="peopleInvolved" value="Employee" />
+          Employee</label
+        >
+        <label
+          ><input type="checkbox" name="peopleInvolved" value="Supervisor" />
+          Supervisor</label
+        >
+        <label
+          ><input type="checkbox" name="peopleInvolved" value="Contractor" />
+          Contractor</label
+        >
+        <label>
+          <input
+            type="checkbox"
+            name="peopleInvolved"
+            value="Visitor/Public"
+          />
+          Visitor/Public</label
+        >
+        <label>
+          <input type="checkbox" name="peopleInvolved" value="Other" /> Other:
+          <input type="text" name="otherPeople" /></label
+        ><br />
+        <label>Name(s): <input type="text" name="namesInvolved" /></label><br />
+        <label
+          >Contact Information: <input type="text" name="contactInfo" /></label
+        ><br />
+        <label
+          >Job Title (if applicable):
+          <input type="text" name="jobTitle" /></label
+        ><br />
+
+        <!-- SECTION 3: TYPE OF INCIDENT -->
+        <h2>Section 3: Type of Incident</h2>
+        <input type="text" name="incidentType" /><br />
+
+        <!-- SECTION 4: INCIDENT DESCRIPTION -->
+        <h2>Section 4: Incident Description</h2>
+        <textarea
+          name="incidentDescription"
+          placeholder="Provide a factual account of what happened..."
+        ></textarea
+        ><br />
+
+        <!-- SECTION 5: INJURIES OR DAMAGE -->
+        <h2>Section 5: Injuries or Damage</h2>
+        <label
+          >Was anyone injured?
+          <input type="radio" name="injured" value="Yes" /> Yes
+          <input type="radio" name="injured" value="No" /> No </label
+        ><br />
+        <label
+          >If yes, describe the injury:
+          <textarea name="injuryDescription"></textarea></label
+        ><br />
+        <label>Was medical attention required?</label><br />
+        <label
+          ><input type="checkbox" name="medicalAttention" value="First aid" />
+          First aid</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="medicalAttention"
+            value="Emergency services"
+          />
+          Emergency services</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="medicalAttention"
+            value="Hospitalization"
+          />
+          Hospitalization</label
+        >
+        <label
+          ><input type="checkbox" name="medicalAttention" value="None" />
+          None</label
+        ><br />
+        <label>Was any property or equipment damaged?</label>
+        <input type="radio" name="propertyDamage" value="Yes" /> Yes
+        <input type="radio" name="propertyDamage" value="No" /> No<br />
+        <label
+          >If yes, describe the damage:
+          <textarea name="damageDescription"></textarea></label
+        ><br />
+        <!-- SECTION 6: IMMEDIATE ACTION TAKEN -->
+<!-- Section 6 -->
+<h2>Section 6: Immediate Action Taken</h2>
+<label>
+  Immediate Action Taken:
+  <input type="text" name="immediateAction" />
+</label><br />
+<label>
+  Details of Action Taken:
+  <textarea name="actionDetails"></textarea>
+</label><br />
+
+        <!-- SECTION 7: CORRECTIVE / PREVENTIVE ACTIONS -->
+        <!-- Section 7-->
+<h2>Section 7: Corrective / Preventive Actions</h2>
+<label>
+  Other:
+  <input type="text" name="correctiveAction" />
+</label><br />
+
+        <!-- SECTION 8: SUPERVISOR REVIEW -->
+        <h2>Section 8: Supervisor Review</h2>
+        <label
+          >Supervisor’s Name: <input type="text" name="supervisorName" /></label
+        ><br />
+        <label>Signature: <input type="text" name="signature" /></label><br />
+        <label>Date: <input type="date" name="supervisorDate" /></label><br />
+
+        <!-- SECTION 9: MANAGEMENT FOLLOW-UP -->
+        <h2>Section 9: Management Follow-Up</h2>
+        <!-- [ ... management action checkboxes ... ] -->
+        <label
+          >Manager’s Comments:
+          <textarea name="managerComments"></textarea></label
+        ><br />
+
+        <!-- ✅ Submit Button (now inside the form) -->
+        <div class="actions">
+          <button id="printPdfBtn" type="button">Print PDF</button>
+          <!-- <button type="submit">Submit</button> -->
+        </div>
+      </form>
+    </div>
+
+    <!-- ✅ Scripts loaded once at the bottom -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-docx-js/0.4.1/html-docx.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
