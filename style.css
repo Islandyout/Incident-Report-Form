@@ -13,6 +13,9 @@ h1 {
 h2 {
   margin-top: 40px;
   color: #34495e;
+  background-color: #e3f2fd; /* Light blue */
+  padding: 8px 12px;
+  border-radius: 4px;
 }
 
 form {
@@ -56,4 +59,11 @@ button {
 
 button:hover {
   background: #0056b3;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto 16px auto;
+  max-width: 150px;
+  height: auto;
 }
